@@ -1,0 +1,212 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 100%;
+    background-color: #f0f0f0;
+}
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #fed700;
+    margin-bottom: 10px;
+}
+header:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+#logo {
+    width: 30%;
+    height: 50px;
+    background-color: black;
+    margin-left: 5%;
+    position: relative;
+    display: inline-block;
+    
+    
+}
+.sprite {
+    width: 45%;
+    height: 50px;
+    background-image: url(img/icondesktop@1x.png);
+    background-position: 6px 14px;
+    background-size: 300%;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+input[type="text"] {
+    border: none;
+    font-size: 12px;
+    padding: 10px;
+    width: 50%;
+    outline: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    display: inline-block;
+}
+#awesome {
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    font-size: 150%;
+    color: #ccc;
+}
+#boxes {
+    width: 65%;
+    height: 50px;
+    display: inline-block;
+    float: right;
+    text-align: center;
+    display: table;
+}
+.box {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 80%;
+}
+.box i {
+    font-size: 250%;
+    display: block;
+}
+.box9, .box10 {
+    border-left: 1px solid #ccc;
+    font-size: 90%;
+}
+#support {
+    background-image: url(img/support.png);
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 45px;
+    position: fixed;
+    bottom: 10px;
+    right: 50px;
+    background-size: contain;
+}
+/*END HEADER*/
+
+/*Infor*/
+#infor {
+    margin: auto;
+    width: 90%;
+    margin-bottom: 10px;
+}
+#infor:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+#news {
+    width: 69%;
+    float: left;
+}
+#slide {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+#slide img {
+    width: 100%;
+    height: 300px;
+}
+.slide_name {
+    display: table;
+    width: 100%;
+    height: 50px;
+}
+div.name {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-right: 1px solid #ccc; 
+    font-size: 90%;
+}
+aside {
+    width: 30%;
+    background-color: white;
+    float: left;
+    margin-left: 1%;
+    position: relative;
+}
+aside img {
+    width: 100%;
+    display: block;
+}
+#tincongnghe > p {
+    color: red;
+    font-size: 80%;
+    position: absolute;
+    top: 7px;
+    right: 8px;
+}
+#tin1 {
+    width: 100%;
+    float: left;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+#tin1 img {
+    float: right;
+    width: 100px;
+    
+    margin-top: 5px;
+}
+#tin1 > p {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.hour {
+    color: dimgrey;
+    font-size: 80%;
+    margin-left: 10px;
+}
+#ads {
+    width: 30%;
+    height: 90px;
+    float: right;
+    margin-top: 10px;
+}
+#ads > img {
+    width: 49%;
+    height: 90px;
+}
+#ads > img:nth-child(2) {
+    float: right;
+}
+#products {
+    margin: auto;
+    width: 91%;
+    height: 800px;
+    text-align: justify;
+}
+
+#products:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.row {
+   display: inline-block;
+    background-color: white;  
+    margin-bottom: 10px;
+}
+
+#products > a:hover {
+    outline: red;
+    outline-style: dashed;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+p.price {
+    color: red;
+    font-weight: bolder;
+    font-size: 90%;
+    margin-left: 10px;
+}
