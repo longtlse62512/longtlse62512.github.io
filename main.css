@@ -1,212 +1,291 @@
+/*@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+@import url(http://necolas.github.io/normalize.css/3.0.2/normalize.css); */
+
 *, html {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
 body {
+    background-color: #ccc;
     font-size: 100%;
-    background-color: #f0f0f0;
+    font: 14px normal serif;
 }
-header {
-    width: 100%;
-    height: 50px;
-    background-color: #fed700;
-    margin-bottom: 10px;
+
+h1 {
+    font-size: 20px;
 }
-header:after {
-    content: ' ';
-    display: block;
-    clear: both;
-}
-#logo {
-    width: 30%;
-    height: 50px;
-    background-color: black;
-    margin-left: 5%;
-    position: relative;
-    display: inline-block;
-    
-    
-}
-.sprite {
-    width: 45%;
-    height: 50px;
-    background-image: url(img/icondesktop@1x.png);
-    background-position: 6px 14px;
-    background-size: 300%;
-    background-repeat: no-repeat;
-    display: inline-block;
-}
-input[type="text"] {
-    border: none;
-    font-size: 12px;
-    padding: 10px;
+
+#noel-image {
+    background: url('image/27b9d95d123ab7e846a2565d4acd17cc.jpg') no-repeat 0 0;
+    background-size: 100% 800px; 
     width: 50%;
-    outline: none;
-    border-radius: 5px;
-    position: absolute;
-    right: 20px;
-    top: 7px;
-    display: inline-block;
-}
-#awesome {
-    position: absolute;
-    top: 12px;
-    right: 25px;
-    font-size: 150%;
-    color: #ccc;
-}
-#boxes {
-    width: 65%;
-    height: 50px;
-    display: inline-block;
-    float: right;
-    text-align: center;
-    display: table;
-}
-.box {
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 80%;
-}
-.box i {
-    font-size: 250%;
-    display: block;
-}
-.box9, .box10 {
-    border-left: 1px solid #ccc;
-    font-size: 90%;
-}
-#support {
-    background-image: url(img/support.png);
-    background-repeat: no-repeat;
-    width: 100px;
-    height: 45px;
-    position: fixed;
-    bottom: 10px;
-    right: 50px;
-    background-size: contain;
-}
-/*END HEADER*/
-
-/*Infor*/
-#infor {
-    margin: auto;
-    width: 90%;
-    margin-bottom: 10px;
-}
-#infor:after {
-    content: ' ';
-    display: block;
-    clear: both;
-}
-#news {
-    width: 69%;
+    height: 672px;
     float: left;
-}
-#slide {
-    width: 100%;
-    height: 300px;
-    text-align: center;
-}
-#slide img {
-    width: 100%;
-    height: 300px;
-}
-.slide_name {
-    display: table;
-    width: 100%;
-    height: 50px;
-}
-div.name {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
-    border-right: 1px solid #ccc; 
-    font-size: 90%;
-}
-aside {
-    width: 30%;
-    background-color: white;
-    float: left;
-    margin-left: 1%;
     position: relative;
 }
-aside img {
-    width: 100%;
+
+.logo {
+    width: 80px;
+    position: fixed;
+    top: -6px;
+    left: 645px;
+    z-index: 9;
+}
+
+.frame {
     display: block;
-}
-#tincongnghe > p {
-    color: red;
-    font-size: 80%;
+    width: 15%;
     position: absolute;
-    top: 7px;
-    right: 8px;
-}
-#tin1 {
-    width: 100%;
-    float: left;
-    padding-bottom: 3px;
-    border-bottom: 1px solid #ccc;
-    text-align: left;
-}
-#tin1 img {
-    float: right;
-    width: 100px;
-    
-    margin-top: 5px;
-}
-#tin1 > p {
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-bottom: 5px;
-}
-.hour {
-    color: dimgrey;
-    font-size: 80%;
-    margin-left: 10px;
-}
-#ads {
-    width: 30%;
-    height: 90px;
-    float: right;
-    margin-top: 10px;
-}
-#ads > img {
-    width: 49%;
-    height: 90px;
-}
-#ads > img:nth-child(2) {
-    float: right;
-}
-#products {
-    margin: auto;
-    width: 91%;
-    height: 800px;
-    text-align: justify;
+    left: 112px; 
+    top: 61px;
+    border-radius: 5px;
 }
 
-#products:after {
-    content: '';
-    display: inline-block;
-    width: 100%;
+.frame2 {
+    left: 112px; 
+    top: 186px;
+    height: 120px;
 }
-.row {
-   display: inline-block;
-    background-color: white;  
-    margin-bottom: 10px;
+#search-frame {
+    width: 68%;
+    height: 30px;
+    background: #ccc;
+    border: 2px solid gray;
+    font-size: 16px;
+    margin-top: 8px;
+    margin-left: 110px;
+    padding: 15px;
+    outline: none;
 }
 
-#products > a:hover {
-    outline: red;
-    outline-style: dashed;
-    text-decoration: none;
+#search-button {
+    position: absolute;
+    top: 11px;
+    right: 112px;
+    font-size: 25px;
+    background-color: darkgray;
+    height: 29px;
+    width: 40px;
+    text-align: center;
+    line-height: 29px;
+}
+
+#search-button:hover {
     cursor: pointer;
 }
 
-p.price {
-    color: red;
-    font-weight: bolder;
-    font-size: 90%;
+#controls {
+    background: url('image/10ab4e5744c3deb61d82c221d9a292d6.jpg') no-repeat 0 0;
+    background-size: 100% 700px;
+    border: 1px solid #D5DDE4;
+    width: 50%;
+    float: left;
+    text-align: center;
+    height: 672px;
+    position: relative;
+}
+
+#controls:after {
+    content: '';
+    display: inline-block;
+    clear: both;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+    background: rgba(0,0,0,0.3);
+    
+    margin-top: 23px;
+    margin-left: 10px;
+    width: 86%;
+    display: inline-block;
+    text-align: center;
+/*    box-shadow: 3px 3px white;*/
+    border-radius: 4px;
+    position: relative;
+}
+
+li {
+    color: white;
+    width: 100%;
+    padding: 15px 2%;
+    text-align: left;
+    border-top: 1px solid white;
+    opacity: 0.8;
+/*    #D5DDE4*/
+}
+
+li:nth-child(1) {
+    border-top: none;
+}
+
+li:nth-child(5) {
+    border-bottom: 1px solid white;
+    margin-bottom: 5px;
+}
+
+
+li span {
+    float: right;
+    color: white;
+}
+
+li.current {  
+    background: rgba(0,0,0,1);
+    background-image: url('image/5568.jpg');
+    background-size: 100%;
+    background-position: 100px 160px;
+    color: floralwhite;
+    font-size: 18px;
+}
+
+li > img {
+/*    opacity: 1;*/
+    width: 40px;
+    display: inline-block;
     margin-left: 10px;
 }
+
+button {
+    margin: 10px;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 5px;
+    background: white;
+}
+
+#playlist > p {
+    width: 100%;
+    height: 40px;
+    text-align: center;   
+    display: inline-block;
+}
+
+#playlist > p > span {
+    background: url('image/ball1.png') no-repeat -7px -10px;
+    background-size: 120% 120%;
+    margin-right: 10px;
+    display: inline-block;
+/*    border: 1px solid black;*/
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+}
+
+#playlist > p > span > a {
+    text-decoration: none;
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+    color: black;
+}
+
+#myPlay > img {
+/*    position: absolute;*/
+    width: 80px;
+    height: 50px;
+}
+
+#myPlay, #myStop, #myNext {
+    
+    position: absolute;
+/*
+    bottom: 50px;
+    left: 250px;
+*/
+}
+
+#myPlay {
+    width: 80px;
+    position: absolute;
+    bottom: 40px;
+    left: 200px;
+    transition: 0.8s;
+}
+
+#myPlay:hover {
+    transform: translateX(-15px);
+    width: 100px;
+}
+
+#myNext {
+    width: 80px;
+    bottom: 35px;
+    left: 320px;
+    transition: 0.8s;
+}
+
+#myNext:hover {
+    transform: translateX(-10px);
+    width: 90px;
+}
+
+#myStop {
+    width: 77px;
+    bottom: 35px;
+    left: 450px;
+    transition: 0.8s;
+}
+
+#myStop:hover {
+    transform: translateX(-10px);
+    width: 90px;
+}
+
+.flower-ring {
+    position: absolute;
+    border-radius: 50%;
+    width: 140px;
+    height: 129px;
+    top: 46%;
+    left: 45%;
+    z-index: 999;
+    transition-property: all;
+}
+
+#flower {
+    border-radius: 50%;
+    width: 100%;
+    position: relative;
+    transition-property: all;
+    transition: 4s;
+}
+
+.rose {
+    width: 100%;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transition-property: all;
+    transform: scale(0);
+    transition: 3s;    
+}
+
+.flower-ring:hover #flower {
+    transform: rotate(-720deg) scale(5);
+    opacity: 0;
+}
+
+.flower-ring:hover .rose {
+    transform: scale(3);
+    transition-delay: 3s;    
+}
+    
+
+
+#overlay {
+    background: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition-property: all;
+    transition: 1s;
+    display: none;
+}
+
+
