@@ -12,7 +12,33 @@ $('.flower-ring').mouseleave(function(){
     });
 });
 
+$('#window-close').click(function(){
+   $('.mask').css({
+       display: 'none'
+   });
+});
 
+var $imgGift = $('<img>');
+$('.mask').append($imgGift);
+$('#noel-image a').click(function(e){
+    e.preventDefault();
+    var imgLocation = $(this).attr('href');
+    var fromIndex = imgLocation.lastIndexOf('/');
+    var endIndex = imgLocation.lastIndexOf('.');
+    var keyWord = imgLocation.substring(fromIndex + 1, endIndex);
+    console.log(imgLocation);
+    console.log(fromIndex);
+    console.log(endIndex);
+    console.log(keyWord);
+    if (keyWord <= 16) {
+        $imgGift.attr('class', 'pic-height');
+    } else {
+        $imgGift.attr('class', 'pic-width');
+    }    
+    $imgGift.attr('src', imgLocation);
+    $imgGift.fadeIn(1);
+    $('.mask').show();
+});
 
 function Media(title, duration, source) {
     this.title = title;
@@ -68,8 +94,6 @@ CountElement.prototype.choosePage = function(page) {
     }
 }
 
-
-
 function Playlist() {
     this.medias = [];
     this.nowMediaIndex = 0;
@@ -77,6 +101,11 @@ function Playlist() {
 
 Playlist.prototype.showPage = function(page) {
     counting.choosePage(page);
+    var currentSong = this.findPlayingMedia();
+    console.log(currentSong);
+    if(currentSong != null){
+        currentSong.stop();
+    }
     this.medias = myPlayList.medias.slice(counting.fromElement, counting.endElement);  
     this.renderMediaList(); 
 }
@@ -93,13 +122,22 @@ Playlist.prototype.checkPlayingMedia = function() {
     return check;
 }
 
+Playlist.prototype.findPlayingMedia = function() {
+    console.log('chay find');
+    for (let i = 0; i < this.medias.length; i++) {
+        if (this.medias[i].isPlaying) {
+            return this.medias[i];
+        }
+    }
+    return null;
+}
+
 Playlist.prototype.add = function(media) {
     this.medias.push(media);
 }
 
 Playlist.prototype.play = function() {
-    console.log('chay play');
-    
+    console.log('chay play');    
     if (this.checkPlayingMedia() == false) {
         var currentMedia = this.medias[this.nowMediaIndex];
         currentMedia.play();
@@ -141,10 +179,10 @@ Playlist.prototype.renderMediaList = function() {
     olTag.appendChild(pTag);
 }
 
-
-
 Playlist.prototype.loadData = function() { //biến tmpList sẽ gọi hàm này để lấy 5 phần tử từ mainList vào , sau đó gọi hàm renderMediaList để show ra 5 phần tử đó vào ta truyền thg MainList để bít số lượng phần tử để tạo element phân trang, sau đó ta biến hằng lên để người lấy tiếp 5 phần tử tiếp theo cho trang kế bên
     this.medias = myPlayList.medias.slice(counting.fromElement, counting.endElement);  
+    var currentSong = this.findPlayingMedia();
+    console.log(currentSong);
     this.renderMediaList();       
 }
 
@@ -163,17 +201,29 @@ var sacMau = new Song('Sắc Màu - remix','2:55','/sound/Sac-Mau-Remix-S-T-365-
 var tuyAm = new Song('Túy Âm - remix','2:55','/sound/Tuy-Am-Xesi-Masew-Nhat-Nguyen.mp3','Xesi-Masew-Nhat-Nguyen');
 var veDoiCuaAnh = new Song('Về Đội Của Anh','2:55','/sound/Ve-Doi-Cua-Anh-Check-Out-Da-Bass-BigDaddy-Touliver.mp3','BigDaddy-Touliver');
 var yeu5 = new Song('Yêu 5','2:55','/sound/Yeu-5-Rhymastic.mp3','Rhymastic');
-
-
 var joyToTheWorld = new Song('Joy To The World','','/sound/noel-JoyToTheWorld.mp3','Boney M.');
-var lastChristmas = new Song('LastChristmas','','/sound/noel-LastChristmas.mp3','');
 var underneathTheTree = new Song('Underneath-The-Tree','','/sound/noel-Underneath-The-Tree-Kelly-Clarkson.mp3','Kelly-Clarkson');
 var whiteChristmas = new Song('WhiteChristmas','','/sound/noel-WhiteChristmas.mp3','');
 var lienKhucGiangSinhChiThienBeBaoAn = new Song('','','/sound/noel-Lien-Khuc-Giang-Sinh-Chi-Thien-Be-Bao-An.mp3','Chi-Thien-Be-Bao-An');
 var felizNavidad = new Song('Feliz-Navidad','','/sound/noel-Feliz-Navidad-Bao-Anh.mp3','Bao-Anh');
-
+var happyChristmas = new Song('Happy-Christmas','','/sound/Happy-Christmas-Hari-Won.mp3','Hari-Won');
+var daLoYeuEmNhieu = new Song('Da-Lo-Yeu-Em-Nhieu','','/sound/Da-Lo-Yeu-Em-Nhieu-JustaTee.mp3','JustaTee');
+var thayLaYeuThuong = new Song('Thay-La-Yeu-Thuong','','/sound/Thay-La-Yeu-Thuong-OnlyC.mp3','OnlyC');
+var withoutYou = new Song('Without-You','','/sound/Without-You-Hari-Won.mp3','Hari-Won');
+var songXaAnhChangDeDang = new Song('Song-Xa-Anh-Chang-De-Dang','','/sound/Song-Xa-Anh-Chang-De-Dang-Bao-Anh.mp3','Bao-Anh');
+var matTroiCuaEm = new Song('Mat-Troi-Cua-Em','','/sound/Mat-Troi-Cua-Em-Phuong-Ly-JustaTee.mp3','Phuong-Ly-JustaTee');
+var cuoiCungAnhCungDen = new Song('Cuoi-Cung-Anh-Cung-Den','','/sound/Cuoi-Cung-Anh-Cung-Den-Hari-Won.mp3','Hari-Won');
+var chamKheTimAnhMotChutThoi = new Song('Cham-Khe-Tim-Anh-Mot-Chut-Thoi','','/sound/Cham-Khe-Tim-Anh-Mot-Chut-Thoi-Noo-Phuoc-Thinh.mp3','Noo-Phuoc-Thinh');
 
 const myPlayList = new Playlist();
+myPlayList.add(happyChristmas);
+myPlayList.add(daLoYeuEmNhieu);
+myPlayList.add(thayLaYeuThuong);
+myPlayList.add(withoutYou);
+myPlayList.add(cuoiCungAnhCungDen);
+myPlayList.add(matTroiCuaEm);
+myPlayList.add(songXaAnhChangDeDang);
+myPlayList.add(chamKheTimAnhMotChutThoi);
 myPlayList.add(aoMongTinhYeu);
 myPlayList.add(choTaGanHon);
 myPlayList.add(sauKhiChiaTayThiPhaiLamGi);
@@ -190,7 +240,6 @@ myPlayList.add(tuyAm);
 myPlayList.add(veDoiCuaAnh);
 myPlayList.add(yeu5);
 myPlayList.add(joyToTheWorld);
-myPlayList.add(lastChristmas);
 myPlayList.add(underneathTheTree);
 myPlayList.add(whiteChristmas);
 myPlayList.add(lienKhucGiangSinhChiThienBeBaoAn);
@@ -199,7 +248,6 @@ const amountAllSong = myPlayList.medias.length;
 const counting = new CountElement(0, 5);
 var tmpList = new Playlist();
 tmpList.loadData();
-
 var playButton = document.getElementById('myPlay');
 var stopButton = document.getElementById('myStop');
 var nextButton = document.getElementById('myNext');

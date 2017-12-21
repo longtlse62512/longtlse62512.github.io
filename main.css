@@ -11,6 +11,7 @@ body {
     background-color: #ccc;
     font-size: 100%;
     font: 14px normal serif;
+    max-height: 672px;
 }
 
 h1 {
@@ -31,43 +32,254 @@ h1 {
     position: fixed;
     top: -6px;
     left: 645px;
+    z-index: 19;
+}
+
+.mask {
+    width: 100%;
+    height: 672px;
+    position: relative;
     z-index: 9;
+    background-image: url('image/97.jpg');
+    background-size: 100% 100%;
+    display: none;
+}
+
+#window-close {
+    font-size: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: white;
+}
+
+#window-close:hover {
+    cursor: pointer;
+}
+
+.pic-height {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 40%;
+    height: 500px;
+    box-shadow: 3px 3px darkgray;
+}
+
+.pic-width {
+    position: absolute;
+    top: 21%;
+    left: 10%;
+    width: 82%;
+    max-height: 420px;
+    box-shadow: 5px 3px darkgray;
+}
+
+.ornament {
+    width: 100%;
+}
+
+.ornament2 {
+    width: 20%;
+    position: absolute;
+    top: 80px;
+    left: 40%;
+}
+
+.ornament3 {
+    width: 90%;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+.gift-on-tree {
+    width: 18px;
+    height: 18px;
+    background-color: antiquewhite;
+    position: absolute;
+        background: transparent;
+}
+
+.gift1 {
+    top: 164px;
+    left: 49%;
+}
+
+.gift2 {
+    top: 200px;
+    left: 45%;
+}
+
+.gift3 {
+    top: 200px;
+    left: 52%;
+}
+
+.gift4 {
+    top: 250px;
+    left: 41%;
+}
+
+.gift5 {
+    top: 245px;
+    left: 47%;
+}
+
+.gift6 {
+    top: 261px;
+    left: 58%;
+}
+
+.gift7 {
+    top: 280px;
+    left: 50%;
+}
+
+.gift8 {
+    top: 310px;
+    left: 36%;
+}
+
+.gift9 {
+    top: 330px;
+    left: 46%;
+}
+
+.gift10 {
+    top: 330px;
+    left: 63%;
+}
+
+.gift11 {
+    top: 365px;
+    left: 32%;
+}
+
+.gift12 {
+    top: 365px;
+    left: 41%;
+}
+
+.gift13 {
+    top: 385px;
+    left: 55%;
+}
+
+.gift14 {
+    top: 389px;
+    left: 66%;
+}
+
+.gift15 {
+    top: 425px;
+    left: 28%;
+}
+
+.gift16 {
+    top: 435px;
+    left: 39%;
+}
+
+.gift17 {
+    top: 415px;
+    left: 47%;
+}
+
+.gift18 {
+    top: 452px;
+    left: 61%;
+}
+
+.gift19 {
+    top: 457px;
+    left: 70%;
+}
+
+.gift20 {
+    top: 495px;
+    left: 24%;
+}
+
+.gift21 {
+    top: 502px;
+    left: 40%;
+}
+
+.gift22 {
+    top: 502px;
+    left: 50%;
+}
+
+.gift23 {
+    top: 520px;
+    left: 63%;
+}
+
+.gift24 {
+    top: 510px;
+    left: 74%;
+}
+
+.gift25 {
+    top: 580px;
+    left: 38%;
+}
+
+.gift26 {
+    top: 580px;
+    left: 47%;
+}
+
+.gift27 {
+    top: 570px;
+    left: 57%;
 }
 
 .frame {
     display: block;
     width: 15%;
     position: absolute;
-    left: 112px; 
-    top: 61px;
     border-radius: 5px;
 }
 
-.frame2 {
-    left: 112px; 
-    top: 186px;
-    height: 120px;
+.frame1 {
+    left: 1px; 
+    top: 100px;
+    height: 100px;
+    width: 15%;
 }
+
+.frame2 {
+    height: 100px;
+    width: 20%;
+}
+
+.frame3 {
+    top: 201px;
+}
+
 #search-frame {
     width: 68%;
     height: 30px;
-    background: #ccc;
-    border: 2px solid gray;
+    background: whitesmoke;
+    border: 1px solid rgb(159,132,79);
     font-size: 16px;
-    margin-top: 8px;
-    margin-left: 110px;
+    margin-top: 5px;
+    margin-left: 70px;
     padding: 15px;
     outline: none;
 }
 
 #search-button {
     position: absolute;
-    top: 11px;
-    right: 112px;
-    font-size: 25px;
+    top: 6px;
+    right: 75px;
+    font-size: 20px;
     background-color: darkgray;
-    height: 29px;
-    width: 40px;
+    height: 30px;
+    width: 60px;
     text-align: center;
     line-height: 29px;
 }
@@ -96,14 +308,12 @@ h1 {
 ol {
     list-style-type: none;
     padding: 0;
-    background: rgba(0,0,0,0.3);
-    
+    background: rgba(0,0,0,0.3);   
     margin-top: 23px;
     margin-left: 10px;
     width: 86%;
     display: inline-block;
     text-align: center;
-/*    box-shadow: 3px 3px white;*/
     border-radius: 4px;
     position: relative;
 }
@@ -115,7 +325,6 @@ li {
     text-align: left;
     border-top: 1px solid white;
     opacity: 0.8;
-/*    #D5DDE4*/
 }
 
 li:nth-child(1) {
@@ -135,15 +344,14 @@ li span {
 
 li.current {  
     background: rgba(0,0,0,1);
-    background-image: url('image/5568.jpg');
-    background-size: 100%;
+    background-image: url('image/li-01.png');
+    background-size: 120%;
     background-position: 100px 160px;
     color: floralwhite;
     font-size: 18px;
 }
 
 li > img {
-/*    opacity: 1;*/
     width: 40px;
     display: inline-block;
     margin-left: 10px;
@@ -169,7 +377,6 @@ button {
     background-size: 120% 120%;
     margin-right: 10px;
     display: inline-block;
-/*    border: 1px solid black;*/
     width: 50px;
     height: 40px;
     line-height: 40px;
@@ -184,18 +391,12 @@ button {
 }
 
 #myPlay > img {
-/*    position: absolute;*/
     width: 80px;
     height: 50px;
 }
 
-#myPlay, #myStop, #myNext {
-    
+#myPlay, #myStop, #myNext {    
     position: absolute;
-/*
-    bottom: 50px;
-    left: 250px;
-*/
 }
 
 #myPlay {
@@ -203,7 +404,7 @@ button {
     position: absolute;
     bottom: 40px;
     left: 200px;
-    transition: 0.8s;
+    transition: 0.8s;   
 }
 
 #myPlay:hover {
@@ -242,7 +443,7 @@ button {
     height: 129px;
     top: 46%;
     left: 45%;
-    z-index: 999;
+    z-index: 8;
     transition-property: all;
 }
 
@@ -251,7 +452,7 @@ button {
     width: 100%;
     position: relative;
     transition-property: all;
-    transition: 4s;
+    transition: 3s;
 }
 
 .rose {
@@ -266,15 +467,13 @@ button {
 
 .flower-ring:hover #flower {
     transform: rotate(-720deg) scale(5);
-    opacity: 0;
+    opacity: 0.1;
 }
 
 .flower-ring:hover .rose {
     transform: scale(3);
-    transition-delay: 3s;    
+    transition-delay: 2s;    
 }
-    
-
 
 #overlay {
     background: rgba(0,0,0,0.7);
@@ -287,5 +486,3 @@ button {
     transition: 1s;
     display: none;
 }
-
-
