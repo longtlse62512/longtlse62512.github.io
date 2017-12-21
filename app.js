@@ -185,35 +185,36 @@ Playlist.prototype.loadData = function() { //biến tmpList sẽ gọi hàm này
     console.log(currentSong);
     this.renderMediaList();       
 }
-
-var aoMongTinhYeu = new Song('Ảo Mộng Tình Yêu','4:03','/sound/Ao-Mong-Tinh-Yeu-Hari-Won.mp3','Hari Won');
-var choTaGanHon = new Song('Cho Ta Gần Hơn','3:36','/sound/Cho-Ta-Gan-Hon-I-m-In-Love-Chi-Pu.mp3','Chi Pu');
-var sauKhiChiaTayThiPhaiLamGi = new Song('Sau Khi Chia Tay Thì Phải Làm Gì','4:29','/sound/Sau-Khi-Chia-Tay-Thi-Phai-Lam-Gi-Trang-Phap-Huniixo-DJ-XILLIX.mp3','Trang Pháp');
-var veVoiEmDi = new Song('Về Với Em Đi','2:50','/sound/Ve-Voi-Em-Di-Touliver-Remix-Tien-Tien-Touliver.mp3','TienTien-Touliver');
-var walkAway = new Song('Walk Away','2:55','/sound/Walk-Away-Toc-Tien.mp3','Tóc Tiên');
-var choHoGhetDiEm = new Song('Cho Họ Ghét Đi Em','2:55','/sound/Cho-Ho-Ghet-Di-Em-Huynh-James.mp3','Huỳnh James');
-var dieuKhacLa = new Song('Điều Khác Lạ','2:55','/sound/Dieu-Khac-La-Masew-Mix-Dat-G-Ngoc-Haleyy-Masew.mp3','Masew-Mix-Dat-G-Ngoc-Haleyy-Masew');
-var fightSong = new Song('Fight Song','2:55','/sound/FightSong.mp3','Rachel Platten');
-var ghen = new Song('Ghen','2:55','/sound/Ghen-Khac-Hung-ERIK-MIN.mp3','Khac-Hung-ERIK-MIN');
-var laConGaiPhaiXinh = new Song('Là Con Gái Phải Xinh','2:55','/sound/La-Con-Gai-Phai-Xinh-Bao-Thy-Kimmese.mp3','Bao-Thy-Kimmese');
-var lacTroi = new Song('Lạc Trôi - remix','2:55','/sound/Lac-Troi-Triple-D-Remix-Son-Tung-M-TP.mp3','Triple-D-Remix-Son-Tung-M-TP');
-var sacMau = new Song('Sắc Màu - remix','2:55','/sound/Sac-Mau-Remix-S-T-365-Nimbia.mp3','S-T-365-Nimbia');
-var tuyAm = new Song('Túy Âm - remix','2:55','/sound/Tuy-Am-Xesi-Masew-Nhat-Nguyen.mp3','Xesi-Masew-Nhat-Nguyen');
-var veDoiCuaAnh = new Song('Về Đội Của Anh','2:55','/sound/Ve-Doi-Cua-Anh-Check-Out-Da-Bass-BigDaddy-Touliver.mp3','BigDaddy-Touliver');
-var yeu5 = new Song('Yêu 5','2:55','/sound/Yeu-5-Rhymastic.mp3','Rhymastic');
-var joyToTheWorld = new Song('Joy To The World','','/sound/noel-JoyToTheWorld.mp3','Boney M.');
-var underneathTheTree = new Song('Underneath-The-Tree','','/sound/noel-Underneath-The-Tree-Kelly-Clarkson.mp3','Kelly-Clarkson');
-var whiteChristmas = new Song('WhiteChristmas','','/sound/noel-WhiteChristmas.mp3','');
-var lienKhucGiangSinhChiThienBeBaoAn = new Song('','','/sound/noel-Lien-Khuc-Giang-Sinh-Chi-Thien-Be-Bao-An.mp3','Chi-Thien-Be-Bao-An');
-var felizNavidad = new Song('Feliz-Navidad','','/sound/noel-Feliz-Navidad-Bao-Anh.mp3','Bao-Anh');
-var happyChristmas = new Song('Happy-Christmas','','/sound/Happy-Christmas-Hari-Won.mp3','Hari-Won');
-var daLoYeuEmNhieu = new Song('Da-Lo-Yeu-Em-Nhieu','','/sound/Da-Lo-Yeu-Em-Nhieu-JustaTee.mp3','JustaTee');
-var thayLaYeuThuong = new Song('Thay-La-Yeu-Thuong','','/sound/Thay-La-Yeu-Thuong-OnlyC.mp3','OnlyC');
-var withoutYou = new Song('Without-You','','/sound/Without-You-Hari-Won.mp3','Hari-Won');
-var songXaAnhChangDeDang = new Song('Song-Xa-Anh-Chang-De-Dang','','/sound/Song-Xa-Anh-Chang-De-Dang-Bao-Anh.mp3','Bao-Anh');
-var matTroiCuaEm = new Song('Mat-Troi-Cua-Em','','/sound/Mat-Troi-Cua-Em-Phuong-Ly-JustaTee.mp3','Phuong-Ly-JustaTee');
-var cuoiCungAnhCungDen = new Song('Cuoi-Cung-Anh-Cung-Den','','/sound/Cuoi-Cung-Anh-Cung-Den-Hari-Won.mp3','Hari-Won');
-var chamKheTimAnhMotChutThoi = new Song('Cham-Khe-Tim-Anh-Mot-Chut-Thoi','','/sound/Cham-Khe-Tim-Anh-Mot-Chut-Thoi-Noo-Phuoc-Thinh.mp3','Noo-Phuoc-Thinh');
+//file:///D:/sound/Sau-Khi-Chia-Tay-Thi-Phai-Lam-Gi-Trang-Phap-Huniixo-DJ-XILLIX.mp3
+//D:/longtlse62512.github.io/sound
+var aoMongTinhYeu = new Song('Ảo Mộng Tình Yêu','4:03','D:/longtlse62512.github.io/sound/Ao-Mong-Tinh-Yeu-Hari-Won.mp3','Hari Won');
+var choTaGanHon = new Song('Cho Ta Gần Hơn','3:36','sound/Cho-Ta-Gan-Hon-I-m-In-Love-Chi-Pu.mp3','Chi Pu');
+var sauKhiChiaTayThiPhaiLamGi = new Song('Sau Khi Chia Tay Thì Phải Làm Gì','4:29','D:/longtlse62512.github.io/sound/Sau-Khi-Chia-Tay-Thi-Phai-Lam-Gi-Trang-Phap-Huniixo-DJ-XILLIX.mp3','Trang Pháp');
+var veVoiEmDi = new Song('Về Với Em Đi','2:50','D:/longtlse62512.github.io/sound/Ve-Voi-Em-Di-Touliver-Remix-Tien-Tien-Touliver.mp3','TienTien-Touliver');
+var walkAway = new Song('Walk Away','2:55','D:/longtlse62512.github.io/sound/Walk-Away-Toc-Tien.mp3','Tóc Tiên');
+var choHoGhetDiEm = new Song('Cho Họ Ghét Đi Em','2:55','D:/longtlse62512.github.io/sound/Cho-Ho-Ghet-Di-Em-Huynh-James.mp3','Huỳnh James');
+var dieuKhacLa = new Song('Điều Khác Lạ','2:55','D:/longtlse62512.github.io/sound/Dieu-Khac-La-Masew-Mix-Dat-G-Ngoc-Haleyy-Masew.mp3','Masew-Mix-Dat-G-Ngoc-Haleyy-Masew');
+var fightSong = new Song('Fight Song','2:55','D:/longtlse62512.github.io/sound/FightSong.mp3','Rachel Platten');
+var ghen = new Song('Ghen','2:55','D:/longtlse62512.github.io/sound/Ghen-Khac-Hung-ERIK-MIN.mp3','Khac-Hung-ERIK-MIN');
+var laConGaiPhaiXinh = new Song('Là Con Gái Phải Xinh','2:55','D:/longtlse62512.github.io/sound/La-Con-Gai-Phai-Xinh-Bao-Thy-Kimmese.mp3','Bao-Thy-Kimmese');
+var lacTroi = new Song('Lạc Trôi - remix','2:55','D:/longtlse62512.github.io/sound/Lac-Troi-Triple-D-Remix-Son-Tung-M-TP.mp3','Triple-D-Remix-Son-Tung-M-TP');
+var sacMau = new Song('Sắc Màu - remix','2:55','D:/longtlse62512.github.io/sound/Sac-Mau-Remix-S-T-365-Nimbia.mp3','S-T-365-Nimbia');
+var tuyAm = new Song('Túy Âm - remix','2:55','D:/longtlse62512.github.io/sound/Tuy-Am-Xesi-Masew-Nhat-Nguyen.mp3','Xesi-Masew-Nhat-Nguyen');
+var veDoiCuaAnh = new Song('Về Đội Của Anh','2:55','D:/longtlse62512.github.io/sound/Ve-Doi-Cua-Anh-Check-Out-Da-Bass-BigDaddy-Touliver.mp3','BigDaddy-Touliver');
+var yeu5 = new Song('Yêu 5','2:55','D:/longtlse62512.github.io/sound/Yeu-5-Rhymastic.mp3','Rhymastic');
+var joyToTheWorld = new Song('Joy To The World','','D:/longtlse62512.github.io/sound/noel-JoyToTheWorld.mp3','Boney M.');
+var underneathTheTree = new Song('Underneath-The-Tree','','D:/longtlse62512.github.io/sound/noel-Underneath-The-Tree-Kelly-Clarkson.mp3','Kelly-Clarkson');
+var whiteChristmas = new Song('WhiteChristmas','','D:/longtlse62512.github.io/sound/noel-WhiteChristmas.mp3','');
+var lienKhucGiangSinhChiThienBeBaoAn = new Song('','','D:/longtlse62512.github.io/sound/noel-Lien-Khuc-Giang-Sinh-Chi-Thien-Be-Bao-An.mp3','Chi-Thien-Be-Bao-An');
+var felizNavidad = new Song('Feliz-Navidad','','D:/longtlse62512.github.io/sound/noel-Feliz-Navidad-Bao-Anh.mp3','Bao-Anh');
+var happyChristmas = new Song('Happy-Christmas','','D:/longtlse62512.github.io/sound/Happy-Christmas-Hari-Won.mp3','Hari-Won');
+var daLoYeuEmNhieu = new Song('Da-Lo-Yeu-Em-Nhieu','','D:/longtlse62512.github.io/sound/Da-Lo-Yeu-Em-Nhieu-JustaTee.mp3','JustaTee');
+var thayLaYeuThuong = new Song('Thay-La-Yeu-Thuong','','D:/longtlse62512.github.io/sound/Thay-La-Yeu-Thuong-OnlyC.mp3','OnlyC');
+var withoutYou = new Song('Without-You','','D:/longtlse62512.github.io/sound/Without-You-Hari-Won.mp3','Hari-Won');
+var songXaAnhChangDeDang = new Song('Song-Xa-Anh-Chang-De-Dang','','D:/longtlse62512.github.io/sound/Song-Xa-Anh-Chang-De-Dang-Bao-Anh.mp3','Bao-Anh');
+var matTroiCuaEm = new Song('Mat-Troi-Cua-Em','','D:/longtlse62512.github.io/sound/Mat-Troi-Cua-Em-Phuong-Ly-JustaTee.mp3','Phuong-Ly-JustaTee');
+var cuoiCungAnhCungDen = new Song('Cuoi-Cung-Anh-Cung-Den','','D:/longtlse62512.github.io/sound/Cuoi-Cung-Anh-Cung-Den-Hari-Won.mp3','Hari-Won');
+var chamKheTimAnhMotChutThoi = new Song('Cham-Khe-Tim-Anh-Mot-Chut-Thoi','','D:/longtlse62512.github.io/sound/Cham-Khe-Tim-Anh-Mot-Chut-Thoi-Noo-Phuoc-Thinh.mp3','Noo-Phuoc-Thinh');
 
 const myPlayList = new Playlist();
 myPlayList.add(happyChristmas);
